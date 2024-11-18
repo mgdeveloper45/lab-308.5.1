@@ -105,3 +105,11 @@ function sortByAge(array) {
 }
 console.log(`The ages of the people are: ${sortByAge(sampleArrOfObjs)}`);
 
+function filterAge(array) {
+    let underFifty = array.filter(fifty => {
+        return fifty.age < 50
+    })
+    return underFifty
+}
+
+console.log(filterAge(sampleArrOfObjs))
