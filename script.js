@@ -56,7 +56,7 @@ function returnSum(arr) {
     return sum
 }
 
-console.log(`The sum of the array of numbers are: ${returnSum(arrOfNum)}`);
+// console.log(`The sum of the array of numbers are: ${returnSum(arrOfNum)}`);
 
 // let arrOfStrings = ["Bobby", "Jonathan", "Matthew", "John", "Chris"];
 let arrOfStrings = ["Bobby", "Jonathan", "Matthew", "John", "Chris", "Madeline"];
@@ -75,7 +75,7 @@ function longestString(string) {
     }
     return strArr.length > 1 ? strArr : longestStr;
 }
-console.log(`The longest string/s is/are: ${longestString(arrOfStrings)}`);
+// console.log(`The longest string/s is/are: ${longestString(arrOfStrings)}`);
 
 function returnStrGreaterThanNum(string, num) {
     let greaterThanNum = [];
@@ -88,7 +88,7 @@ function returnStrGreaterThanNum(string, num) {
     ? greaterThanNum 
     : "No strings greater than the given number";
 }
-console.log(returnStrGreaterThanNum(arrOfStrings, 7))
+// console.log(returnStrGreaterThanNum(arrOfStrings, 7))
 
 // Part 2: Thinking Methodically
 let sampleArrOfObjs = [
@@ -103,7 +103,7 @@ function sortByAge(array) {
     array.sort(arr => { ages.push(arr.age) });
     return ages
 }
-console.log(`The ages of the people are: ${sortByAge(sampleArrOfObjs)}`);
+// console.log(`The ages of the people are: ${sortByAge(sampleArrOfObjs)}`);
 
 function filterAge(array) {
     let underFifty = array.filter(fifty => {
@@ -111,5 +111,14 @@ function filterAge(array) {
     })
     return underFifty
 }
+// console.log(filterAge(sampleArrOfObjs));
 
-console.log(filterAge(sampleArrOfObjs))
+function mapArray(array) {
+    array.map(person => {
+        person.job = person.occupation;
+        delete person.occupation
+        person.age = parseInt(person.age) + 1;
+    })
+    return array
+}
+// console.log(mapArray(sampleArrOfObjs))
