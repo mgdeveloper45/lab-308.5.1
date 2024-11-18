@@ -122,3 +122,11 @@ function mapArray(array) {
     return array
 }
 // console.log(mapArray(sampleArrOfObjs))
+
+function reduceAge(array) {
+    let aveOfAges = array.reduce((sum, num) => {
+       return sum + parseInt(num.age) 
+}, 0)
+    return Math.floor(aveOfAges / array.length)
+}
+console.log(reduceAge(sampleArrOfObjs))
