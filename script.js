@@ -89,3 +89,19 @@ function returnStrGreaterThanNum(string, num) {
     : "No strings greater than the given number";
 }
 console.log(returnStrGreaterThanNum(arrOfStrings, 7))
+
+// Part 2: Thinking Methodically
+let sampleArrOfObjs = [
+    { id: "42", name: "Bruce", occupation: "Knight", age: "41" }, 
+    { id: "48", name: "Barry", occupation: "Runner", age: "25" }, 
+    { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" }, 
+    { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" }, 
+    { id: "7", name: "Bilbo", occupation: "None", age: "111" }
+]
+function sortByAge(array) {
+    let ages = [];
+    array.sort(arr => { ages.push(arr.age) });
+    return ages
+}
+console.log(`The ages of the people are: ${sortByAge(sampleArrOfObjs)}`);
+
