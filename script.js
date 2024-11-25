@@ -129,4 +129,32 @@ function reduceAge(array) {
 }, 0)
     return Math.floor(aveOfAges / array.length)
 }
-console.log(reduceAge(sampleArrOfObjs))
+// console.log(reduceAge(sampleArrOfObjs))
+
+// Part 3: Thinking Critically
+function incrementAge(array) {
+    for(let arr of array) {
+        if (!arr.age) {
+            arr.age = 0;
+        }
+        arr.age = parseInt(arr.age) + 1; 
+        arr.updated_at = new Date(); 
+    }
+    return array
+  }
+//  console.log(incrementAge(sampleArrOfObjs))
+
+function incrementAgeCopy(array) {
+    let newArr = []
+    for(let arr of array) {
+        let copy = { ...arr };
+        if (!copy.age) {
+            copy.age = 0;
+        }
+        copy.age = parseInt(copy.age) + 1; 
+        copy.updated_at = new Date(); 
+        newArr.push(copy)
+    }
+    return newArr
+  }
+  console.log(incrementAgeCopy(sampleArrOfObjs))
